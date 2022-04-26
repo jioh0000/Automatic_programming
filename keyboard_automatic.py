@@ -31,8 +31,13 @@ import time
 
 pyperclip.copy("안녕하세요")
 
-pyautogui.keyDown('command')
-pyautogui.press('v')
-pyautogui.keyUp('command')
+pyautogui.keyDown('command') #hold command
+pyautogui.press('v') # press v
+pyautogui.keyUp('command') # command off
 
-안녕하세요안녕하세요안녕하세요
+# Multiple presses
+pyautogui.press(['J','I','O','H'])
+pyautogui.press('left', presses=3) # presses = 반복 계수 
+pyautogui.press('left', presses=3, interval=0.5)
+
+# pyautogui.hotkey('command', 'c')
